@@ -1,4 +1,4 @@
-#include "../inc/day1.h"
+#include "../inc/day01.h"
 
 #include <algorithm>
 #include <fstream>

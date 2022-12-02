@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/build/advent2022",
             "preLaunchTask": "preLaunchBuild",
             // "args": ["${workspaceFolder}/inputData/dummyLogs/1MDummies_1001UniqueKeys"],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
