@@ -118,30 +118,29 @@ void part1()
         }
 
         //part 1 move
-        for(int i = 0; i < moveCount; i++)
-        {
-            int boxVal = stacks[(from-1)].back();
-            stacks[(from-1)].pop_back();
-            stacks[(to-1)].push_back(boxVal);
-        }
-
-        // char tempStack[50];
         // for(int i = 0; i < moveCount; i++)
         // {
-        //     if(stacks[(from-1)].size() == 0)
-        //     {
-        //         std::cout << "size zero";
-        //     }
         //     int boxVal = stacks[(from-1)].back();
         //     stacks[(from-1)].pop_back();
-        //     tempStack[i] = boxVal;
+        //     stacks[(to-1)].push_back(boxVal);
         // }
 
-        // for(int i = (moveCount-1); i >= 0; i++)
-        // {
-            // stacks[(to-1)].push_back(tempStack[i]);
-        // }
+        std::vector<char> tempStack;
+        for(int i = 0; i < moveCount; i++)
+        {
+            if(stacks[(from-1)].size() == 0)
+            {
+                std::cout << "size zero";
+            }
+            char boxVal = stacks[(from-1)].back();
+            stacks[(from-1)].pop_back();
+            tempStack.push_back(boxVal);
+        }
 
+        for(int i = 1; i <= moveCount; i++)
+        {
+            stacks[(to-1)].push_back(tempStack.at(moveCount - i));
+        }
     }
 
     for (auto const &stack : stacks)
