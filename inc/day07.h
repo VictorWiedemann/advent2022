@@ -1,3 +1,3 @@
 #pragma once
 
-void day7();
+void day07();
